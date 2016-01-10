@@ -47,6 +47,11 @@ def send_sms(message):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == '--test-sms':
+        print("Testing SMS.")
+        send_sms("Test SMS from Postfix queue monitor.")
+        sys.exit(0)
+
     mailq_output = local['mailq']()
     queue_size = get_queue_size(mailq_output)
 

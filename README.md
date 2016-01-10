@@ -35,3 +35,10 @@ cp example.config.ini config.ini
 ```
 * * * * * /root/mailq-monitor/mailq_check.py
 ```
+
+## Testing
+
+To check SMS configuration, you can run:
+```bash
+./mailq_check.py --test-sms
+```
